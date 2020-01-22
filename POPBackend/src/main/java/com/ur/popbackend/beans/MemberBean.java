@@ -1,29 +1,21 @@
-package com.ur.popbackend.entities;
+package com.ur.popbackend.beans;
 
 import com.ur.popbackend.enums.Availability;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import java.time.LocalDate;
 import java.util.TimeZone;
 
-@Entity
-public class Member {
-    @Id
-    @GeneratedValue
+
+public class MemberBean {
     private int id;
     private String name;
-    private LocalDate companyAnniversary;
+    private String companyAnniversary;
     private TimeZone timeZone;
     private Availability availability;
     private String phone;
-    private LocalDate startingDate;
+    private String startingDate;
     private String companyRole;
 
-    public Member() {
-        //spring data
-    }
+
 
     public int getId() {
         return id;
@@ -41,11 +33,11 @@ public class Member {
         this.name = name;
     }
 
-    public LocalDate getCompanyAnniversary() {
+    public String getCompanyAnniversary() {
         return companyAnniversary;
     }
 
-    public void setCompanyAnniversary(LocalDate companyAnniversary) {
+    public void setCompanyAnniversary(String companyAnniversary) {
         this.companyAnniversary = companyAnniversary;
     }
 
@@ -73,11 +65,11 @@ public class Member {
         this.phone = phone;
     }
 
-    public LocalDate getStartingDate() {
+    public String getStartingDate() {
         return startingDate;
     }
 
-    public void setStartingDate(LocalDate startingDate) {
+    public void setStartingDate(String startingDate) {
         this.startingDate = startingDate;
     }
 
