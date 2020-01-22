@@ -22,6 +22,7 @@ public class Member {
     private String companyRole;
 
     public Member() {
+        //spring data
     }
 
     public int getId() {
