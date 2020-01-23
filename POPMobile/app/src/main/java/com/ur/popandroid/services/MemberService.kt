@@ -1,7 +1,10 @@
-package services
+package com.ur.popandroid.services
 
 import com.ur.popandroid.R
-import entities.Member
+import com.ur.popandroid.entities.Member
+
+
+
 
 class MemberService {
 

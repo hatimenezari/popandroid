@@ -6,8 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import entities.Member
-import java.time.LocalTime
+import com.ur.popandroid.entities.Member
 
 class TeamAdapter(val members: List<Member>) : RecyclerView.Adapter<TeamAdapter.TeamViewHolder>() {
     class TeamViewHolder : RecyclerView.ViewHolder {

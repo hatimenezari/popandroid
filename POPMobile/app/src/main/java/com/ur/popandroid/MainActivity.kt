@@ -2,9 +2,10 @@ package com.ur.popandroid
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import services.MemberService
+import com.ur.popandroid.services.MemberService
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,5 +27,9 @@ class MainActivity : AppCompatActivity() {
 
         rclvTeam.adapter = teamAdapter
         rclvTeam.layoutManager = teamLayoutManager
+    }
+
+    fun seeInfo(v:View):Unit{
+
     }
 }
