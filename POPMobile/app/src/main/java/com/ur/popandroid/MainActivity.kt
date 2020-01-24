@@ -3,6 +3,7 @@ package com.ur.popandroid
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -24,19 +25,22 @@ class MainActivity : AppCompatActivity() {
 
         mainActivityViewModel = ViewModelProviders.of(this).get(MainActivityViewModel::class.java)
         mainActivityViewModel.init()
-        mainActivityViewModel.getMembersRepository()?.observe(this, Observer {
-            members.addAll(it)
+        mainActivityViewModel.getMembers()?.observe(this, Observer {
+            if(it != null)
+                members.addAll(it)
+            teamAdapter = TeamAdapter(members)
+            rclvTeam.adapter = teamAdapter
         })
 
         rclvTeam = findViewById(R.id.main_rclv_team)
         teamLayoutManager = LinearLayoutManager(this)
-        teamAdapter = TeamAdapter(members)
 
-        rclvTeam.adapter = teamAdapter
+
+
         rclvTeam.layoutManager = teamLayoutManager
     }
 
     fun seeInfo(v:View){
-
+        //to be implemented
     }
 }

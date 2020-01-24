@@ -20,7 +20,7 @@ class MainActivityViewModel : ViewModel() {
         mutableLiveData = memberRepository.getMembers()
     }
 
-    fun getMembersRepository(): LiveData<List<Member>>? {
+    fun getMembers(): LiveData<List<Member>>? {
         return mutableLiveData
     }
 }

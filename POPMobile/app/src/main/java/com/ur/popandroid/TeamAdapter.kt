@@ -34,9 +34,9 @@ class TeamAdapter(val members: List<Member>) : RecyclerView.Adapter<TeamAdapter.
     override fun onBindViewHolder(holder: TeamViewHolder, position: Int) {
          val currentMember: Member = members[position]
 
-        holder.memberPicture.setImageResource(R.drawable.oval4)
+        holder.memberPicture.setImageResource(R.drawable.oval2)
         holder.name.text = currentMember.name
-        holder.time.text = Calendar.getInstance(currentMember.timeZone).time.time.toString()
+        holder.time.text = currentMember.timeZone
         holder.state.text = currentMember.availability
     }
 }
