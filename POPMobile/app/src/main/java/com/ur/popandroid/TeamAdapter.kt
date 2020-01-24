@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import entities.Member
-import java.time.LocalTime
+import com.ur.popandroid.entities.Member
+import java.util.*
 
 class TeamAdapter(val members: List<Member>) : RecyclerView.Adapter<TeamAdapter.TeamViewHolder>() {
     class TeamViewHolder : RecyclerView.ViewHolder {
@@ -34,9 +34,9 @@ class TeamAdapter(val members: List<Member>) : RecyclerView.Adapter<TeamAdapter.
     override fun onBindViewHolder(holder: TeamViewHolder, position: Int) {
          val currentMember: Member = members[position]
 
-        holder.memberPicture.setImageResource(currentMember.pictureRessource)
+        holder.memberPicture.setImageResource(R.drawable.oval2)
         holder.name.text = currentMember.name
-        holder.time.text = currentMember.time
-        holder.state.text = currentMember.state
+        holder.time.text = currentMember.timeZone
+        holder.state.text = currentMember.availability
     }
 }
