@@ -1,4 +1,4 @@
-package com.ur.popandroid.modelviews
+package com.ur.popandroid.viewmodels
 
 import androidx.lifecycle.LiveData
 
@@ -12,6 +12,7 @@ import com.ur.popandroid.services.MemberRepository
 class MainActivityViewModel : ViewModel() {
     private var mutableLiveData: MutableLiveData<List<Member>>? = null
     private lateinit var memberRepository: MemberRepository
+
     fun init() {
         if (mutableLiveData != null) {
             return
