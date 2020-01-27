@@ -1,4 +1,4 @@
-package com.ur.popandroid
+package com.ur.popandroid.utils
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.ur.popandroid.R
 import com.ur.popandroid.entities.Member
-import java.util.*
 
 class TeamAdapter(val members: List<Member>) : RecyclerView.Adapter<TeamAdapter.TeamViewHolder>() {
     class TeamViewHolder : RecyclerView.ViewHolder {

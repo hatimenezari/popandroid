@@ -1,19 +1,13 @@
-package com.ur.popandroid.services
+package com.ur.popandroid.Repositories
 
 import androidx.lifecycle.MutableLiveData
-import com.ur.popandroid.GenericResponseList
+import com.ur.popandroid.utils.GenericResponseList
 import com.ur.popandroid.entities.Member
+import com.ur.popandroid.services.MemberService
+import com.ur.popandroid.services.RetrofitService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.http.GET
-
-
-interface MemberService {
-
-    @GET("members/")
-    fun getMembers(): Call<GenericResponseList<Member>>
-}
 
 class MemberRepository private constructor() {
     private val memberService: MemberService = RetrofitService.createService(MemberService::class.java)
