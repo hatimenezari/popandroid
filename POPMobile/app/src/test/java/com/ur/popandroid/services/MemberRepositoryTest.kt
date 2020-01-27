@@ -5,10 +5,6 @@ import com.ur.popandroid.Repositories.MemberRepository
 import com.ur.popandroid.entities.Member
 import com.ur.popandroid.utils.GenericResponseList
 import org.junit.Test
-import org.mockito.Mock
-import org.mockito.Mockito
-import org.mockito.Mockito.`when`
-import retrofit2.mock.Calls
 
 
 class MemberRepositoryTest {
@@ -26,7 +22,7 @@ class MemberRepositoryTest {
         )
     )
 
-    @Test
+ /*   @Test
     fun getMembers() {
 
 
@@ -35,7 +31,7 @@ class MemberRepositoryTest {
         `when`(memberService.getMembers()).thenReturn(Calls.response(GenericResponseList(members)))
         val returnedMembers = memberRepository.getMembers()?.value
         // assert TODO
-    }
+    }*/
 
 }
 
