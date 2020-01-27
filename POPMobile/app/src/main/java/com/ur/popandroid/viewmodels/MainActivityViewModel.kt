@@ -5,11 +5,12 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 
 import androidx.lifecycle.ViewModel
+import com.ur.popandroid.Repositories.MemberRepository
 import com.ur.popandroid.entities.Member
-import com.ur.popandroid.services.MemberRepository
 
 
 class MainActivityViewModel : ViewModel() {
+
     private var mutableLiveData: MutableLiveData<List<Member>>? = null
     private lateinit var memberRepository: MemberRepository
 
