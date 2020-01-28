@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">popandroid</string>
     <string name="main_team">Team</string>
+    <string name="info_btn_back">Team</string>
+    <string name="info_txt_email">Email</string>
+    <string name="info_txt_phone">Phone</string>
+    <string name="info_txt_anniversary">Company anniversary</string>
+    <string name="info_txt_timezone">TimeZone</string>
+    <string name="info_txt_starting_date">Started</string>
+    <string name="info_member_s_avatar">member\'s avatar</string>
+    <string name="main_btn_log_out">log out</string>
+    <string name="action_bar_btn_go_to_team_s_activity">go to team\'s activity</string>
+    <string name="action_bar_btn_go_to_leaves_activity">go to leaves activity</string>
+    <string name="action_bar_btn_go_to_calendar">go to calendar</string>
 </resources>

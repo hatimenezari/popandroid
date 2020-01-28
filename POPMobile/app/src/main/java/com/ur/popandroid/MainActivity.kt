@@ -1,9 +1,8 @@
 package com.ur.popandroid
 
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.PorterDuff
 import android.os.Bundle
-import android.view.View
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -11,7 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ur.popandroid.entities.Member
 import com.ur.popandroid.utils.TeamAdapter
 import com.ur.popandroid.viewmodels.MainActivityViewModel
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.action_bar.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,12 +37,8 @@ class MainActivity : AppCompatActivity() {
         rclvTeam = findViewById(R.id.main_rclv_team)
         teamLayoutManager = LinearLayoutManager(this)
 
-
-
         rclvTeam.layoutManager = teamLayoutManager
+        btn_team.setColorFilter(R.color.colorPrimaryLight)
     }
 
-    fun seeInfo(v:View){
-        //to be implemented
-    }
 }

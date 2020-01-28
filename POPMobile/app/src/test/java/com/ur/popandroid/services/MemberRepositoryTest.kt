@@ -18,7 +18,10 @@ class MemberRepositoryTest {
             "out sick",
             "0634563289",
             "14/01/2020",
-            "software engineer"
+            "software engineer",
+            "test",
+            "test@test.test",
+            "testimoji"
         )
     )
 

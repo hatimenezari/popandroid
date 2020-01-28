@@ -15,7 +15,8 @@
         android:src="@drawable/team_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_leaves"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/action_bar_btn_go_to_team_s_activity" />
 
     <ImageButton
         android:id="@+id/btn_leaves"
@@ -26,7 +27,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_calendar"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn_team" />
+        app:layout_constraintStart_toEndOf="@+id/btn_team"
+        android:contentDescription="@string/action_bar_btn_go_to_leaves_activity" />
 
     <ImageButton
         android:id="@+id/btn_calendar"
@@ -36,6 +38,7 @@
         android:src="@drawable/calendar_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_leaves" />
+        app:layout_constraintStart_toEndOf="@+id/btn_leaves"
+        android:contentDescription="@string/action_bar_btn_go_to_calendar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
