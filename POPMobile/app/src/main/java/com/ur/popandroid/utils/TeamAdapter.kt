@@ -17,7 +17,7 @@ class TeamAdapter(val members: List<Member>) : RecyclerView.Adapter<TeamAdapter.
         var state : TextView
 
         constructor(v: View) : super(v) {
-            memberPicture = v.findViewById(R.id.card_img_pic)
+            memberPicture = v.findViewById(R.id.card_img_avatar)
             name = v.findViewById(R.id.card_txt_name)
             time = v.findViewById(R.id.card_txt_time)
             state = v.findViewById(R.id.card_txt_state)

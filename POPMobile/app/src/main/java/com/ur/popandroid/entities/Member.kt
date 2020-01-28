@@ -1,7 +1,5 @@
 package com.ur.popandroid.entities
 
-import java.util.*
-
 data class Member(
     val id: Int,
     val name: String,

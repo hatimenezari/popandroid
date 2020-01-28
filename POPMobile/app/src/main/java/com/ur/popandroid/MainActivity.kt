@@ -1,5 +1,6 @@
 package com.ur.popandroid
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -35,12 +36,15 @@ class MainActivity : AppCompatActivity() {
         rclvTeam = findViewById(R.id.main_rclv_team)
         teamLayoutManager = LinearLayoutManager(this)
 
-
-
         rclvTeam.layoutManager = teamLayoutManager
     }
 
     fun seeInfo(v:View){
         //to be implemented
+    }
+
+    fun checkLeaves(v:View){
+        intent = Intent(this, LeavesActivity::class.java)
+        startActivity(intent)
     }
 }
