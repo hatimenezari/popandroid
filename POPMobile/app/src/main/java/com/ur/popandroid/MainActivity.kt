@@ -2,15 +2,18 @@ package com.ur.popandroid
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
+import android.graphics.PorterDuff
 import android.os.Bundle
-import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ur.popandroid.entities.Member
-import com.ur.popandroid.modelviews.MainActivityViewModel
 import com.ur.popandroid.utils.TeamAdapter
+import com.ur.popandroid.viewmodels.MainActivityViewModel
+import kotlinx.android.synthetic.main.action_bar.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,10 +40,7 @@ class MainActivity : AppCompatActivity() {
         teamLayoutManager = LinearLayoutManager(this)
 
         rclvTeam.layoutManager = teamLayoutManager
-    }
-
-    fun seeInfo(v:View){
-        //to be implemented
+        btn_team.setColorFilter(R.color.colorPrimaryLight)
     }
 
     fun checkLeaves(v:View){

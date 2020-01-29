@@ -44,7 +44,8 @@
         android:background="@drawable/circle"
         android:src="@drawable/log_out_icon"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        android:contentDescription="@string/main_btn_log_out" />
 
     <LinearLayout
         android:id="@id/lyt_include_action_bar"
