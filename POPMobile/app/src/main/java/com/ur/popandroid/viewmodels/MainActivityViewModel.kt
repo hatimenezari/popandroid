@@ -1,4 +1,4 @@
-package com.ur.popandroid.modelviews
+package com.ur.popandroid.viewmodels
 
 import androidx.lifecycle.LiveData
 

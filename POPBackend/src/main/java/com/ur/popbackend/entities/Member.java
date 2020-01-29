@@ -20,6 +20,9 @@ public class Member {
     private String phone;
     private LocalDate startingDate;
     private String companyRole;
+    private String avatarURI;
+    private String email;
+    private String bio;
 
     public Member() {
         //spring data
@@ -87,5 +90,29 @@ public class Member {
 
     public void setCompanyRole(String companyRole) {
         this.companyRole = companyRole;
+    }
+
+    public String getAvatarURI() {
+        return avatarURI;
+    }
+
+    public void setAvatarURI(String avatarURI) {
+        this.avatarURI = avatarURI;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
     }
 }
