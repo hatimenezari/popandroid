@@ -18,16 +18,18 @@ import com.ur.popandroid.utils.Constants.Companion.availableEmoji
 import com.ur.popandroid.utils.Constants.Companion.awayEmoji
 import com.ur.popandroid.utils.Constants.Companion.sickEmoji
 import com.ur.popandroid.utils.Constants.Companion.vacationEmoji
+import kotlinx.android.synthetic.main.card_leave.view.*
+import kotlinx.android.synthetic.main.card_member.view.*
 import java.text.SimpleDateFormat
 import java.util.*
 
 
 class TeamAdapter(val members: List<Member>) : RecyclerView.Adapter<TeamAdapter.TeamViewHolder>() {
     inner class TeamViewHolder(v: View) : RecyclerView.ViewHolder(v) {
-        var memberPicture: ImageView = v.findViewById(R.id.card_img_pic)
-        var name: TextView = v.findViewById(R.id.card_txt_name)
-        var time: TextView = v.findViewById(R.id.card_txt_time)
-        var state: TextView = v.findViewById(R.id.card_txt_state)
+        var memberPicture: ImageView = v.card_img_pic
+        var name: TextView = v.card_txt_name
+        var time: TextView = v.card_txt_time
+        var state: TextView = v.card_txt_state
 
         init {
             v.setOnClickListener { v -> showDetails(v, members[adapterPosition])}
@@ -63,7 +65,7 @@ class TeamAdapter(val members: List<Member>) : RecyclerView.Adapter<TeamAdapter.
             "AVAILABLE" -> stateString += String(Character.toChars(availableEmoji)) + " Available"
             "AWAY" -> stateString += String(Character.toChars(awayEmoji)) + " Away"
             "OUT_SICK" -> stateString += String(Character.toChars(sickEmoji)) + " Out sick"
-            "ENJOYING_LIFE" -> stateString += String(Character.toChars(vacationEmoji)) + " Enjoying Life"
+            "ENJOYING_LIFE" -> stateString += String(Character.toChars(vacationEmoji)) + " Enjoying life"
         }
         return stateString
     }

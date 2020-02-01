@@ -2,9 +2,8 @@ package com.ur.popandroid
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
-import android.graphics.PorterDuff
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import android.view.View
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -25,11 +24,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val members: MutableList<Member> = ArrayList()
 
         mainActivityViewModel = ViewModelProviders.of(this).get(MainActivityViewModel::class.java)
-        mainActivityViewModel.init()
         mainActivityViewModel.getMembers()?.observe(this, Observer {
+            val members: MutableList<Member> = ArrayList()
             if(it != null)
                 members.addAll(it)
             teamAdapter = TeamAdapter(members)
@@ -43,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         btn_team.setColorFilter(R.color.colorPrimaryLight)
     }
 
-    fun checkLeaves(v:View){
+    fun checkLeaves(v: View){
         intent = Intent(this, LeavesActivity::class.java)
         startActivity(intent)
     }

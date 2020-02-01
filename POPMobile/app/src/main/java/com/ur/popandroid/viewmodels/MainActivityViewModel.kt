@@ -12,14 +12,11 @@ import com.ur.popandroid.entities.Member
 class MainActivityViewModel : ViewModel() {
 
     private var mutableLiveData: MutableLiveData<List<Member>>? = null
-    private lateinit var memberRepository: MemberRepository
+    private var memberRepository: MemberRepository = MemberRepository
 
-    fun init() {
-        if (mutableLiveData != null) {
-            return
-        }
-        memberRepository = MemberRepository.instance
-        mutableLiveData = memberRepository.getMembers()
+    init {
+        if (mutableLiveData == null)
+            mutableLiveData = memberRepository.getMembers()
     }
 
     fun getMembers(): LiveData<List<Member>>? {

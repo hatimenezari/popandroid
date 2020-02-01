@@ -7,4 +7,10 @@
     <color name="textColorPrimary">#FFFFFF</color>
     <color name="textColorSecondary">#989DB3</color>
     <color name="colorAccent">#989DB3</color>
+    <color name="pendingText">#F5A623</color>
+    <color name="pendingBackground">#4B3D37</color>
+    <color name="approvedText">#3DCD58</color>
+    <color name="approvedBackground">#284342</color>
+    <color name="deniedText">#E23943</color>
+    <color name="deniedBackground">#49253D</color>
 </resources>

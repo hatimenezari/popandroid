@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.ur.popandroid.R
 import com.ur.popandroid.entities.Leave
 import kotlinx.android.synthetic.main.card_leave.view.*
@@ -42,12 +44,15 @@ class LeaveAdapter(val leaves: List<Leave>) : RecyclerView.Adapter<LeaveAdapter.
     override fun onBindViewHolder(holder: LeaveViewHolder, position: Int) {
         val currentLeave = leaves[position]
 
-        holder.avatar.setImageResource(R.drawable.oval2)
-        holder.name.text = "test"
-        holder.endingDate.text = currentLeave.endingDate.toString()
-        holder.startingDate.text = currentLeave.startingDate.toString()
+        Glide.with(holder.avatar.context)
+            .load(currentLeave.member.avatarURI)
+            .transform(CircleCrop())
+            .into(holder.avatar)
+        holder.name.text = currentLeave.member.name
+        holder.startingDate.text = "From\n${currentLeave.startingDate}"
+        holder.endingDate.text = "To\n${currentLeave.endingDate}"
         holder.duration.text = currentLeave.duration
-        holder.date.text = currentLeave.date
+        holder.date.text = currentLeave.date.toString()
         holder.reason.text = currentLeave.reason
     }
 }

@@ -1,15 +1,13 @@
 package com.ur.popandroid.entities
 
-import java.time.LocalDate
 
 data class Leave(
     val id: Int,
-    val avatar: String,
-    val type: String,
     val date: String,
-    val startingDate: LocalDate,
-    val endingDate: LocalDate,
+    val startingDate: String,
+    val endingDate: String,
     val duration: String,
     val status: String,
-    val reason:String
+    val reason:String,
+    val member: Member
 )
