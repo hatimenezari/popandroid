@@ -13,4 +13,10 @@
     <string name="action_bar_btn_go_to_leaves_activity">go to leaves activity</string>
     <string name="action_bar_btn_go_to_calendar">go to calendar</string>
     <string name="card_leave_txt_pending">Pending</string>
+    <string name="card_history_leave_txt_starting">Starting</string>
+    <string name="card_leave_btn_refuse">Refuse</string>
+    <string name="card_leave_btn_approve">Approve</string>
+    <string name="leave_btn_upcoming">upcoming</string>
+    <string name="leave_btn_all">All</string>
+    <string name="leave_txt_title">Leaves</string>
 </resources>

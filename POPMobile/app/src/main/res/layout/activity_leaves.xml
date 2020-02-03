@@ -7,18 +7,65 @@
     android:background="@color/colorPrimaryDark"
     tools:context=".LeavesActivity">
 
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/leaves_lyt_types"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_toggle"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/leaves_btn_upcoming"
+            android:layout_width="130sp"
+            android:layout_height="28sp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/rounded_toggle_selected"
+            android:onClick="switchToggleUpcoming"
+            android:text="@string/leave_btn_upcoming"
+            android:textAllCaps="false"
+            android:textColor="@color/textColorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/leaves_btn_all"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/leaves_btn_all"
+            android:layout_width="130sp"
+            android:layout_height="28sp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/rounded_toggle"
+            android:onClick="switchToggleAll"
+            android:text="@string/leave_btn_all"
+            android:textAllCaps="false"
+            android:textColor="@color/textColorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/leaves_btn_upcoming"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:text="Leaves"
+        android:text="@string/leave_txt_title"
         android:textColor="@color/textColorPrimary"
-        android:textStyle="bold"
         android:textSize="32sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/leaves_lyt_types" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/leaves_rclv"
@@ -32,15 +79,15 @@
     <LinearLayout
         android:id="@id/lyt_include_action_bar"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintStart_toStartOf="parent">
 
         <include
             android:id="@+id/lyt_include_action_bar"
             layout="@layout/action_bar" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

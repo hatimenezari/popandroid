@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
-    android:background="@drawable/rounded_corners_dark"
-    android:onClick="seeInfo">
+    android:background="@drawable/rounded_corners_dark">
 
 
     <ImageView
@@ -116,9 +115,10 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/rounded_button_dark"
-        android:text="Refuse"
+        android:text="@string/card_leave_btn_refuse"
         android:textColor="@color/textColorSecondary"
         android:textSize="18sp"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button3"
         app:layout_constraintStart_toStartOf="parent"
@@ -130,9 +130,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:background="@drawable/rounded_button_light"
-        android:text="Approve"
+        android:text="@string/card_leave_btn_approve"
         android:textColor="@color/textColorPrimary"
         android:textSize="18sp"
+        android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button2"
         app:layout_constraintTop_toTopOf="@+id/button2" />

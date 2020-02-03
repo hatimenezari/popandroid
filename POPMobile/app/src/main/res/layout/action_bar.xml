@@ -10,37 +10,37 @@
     <ImageButton
         android:id="@+id/btn_team"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="70sp"
         android:background="@drawable/transparent_button"
-        android:src="@drawable/team_icon"
+        android:contentDescription="@string/action_bar_btn_go_to_team_s_activity"
         android:onClick="checkTeam"
+        android:src="@drawable/team_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_leaves"
-        app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="@string/action_bar_btn_go_to_team_s_activity" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/btn_leaves"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="70sp"
         android:background="@drawable/transparent_button"
-        android:src="@drawable/leaves_icon"
+        android:contentDescription="@string/action_bar_btn_go_to_leaves_activity"
         android:onClick="checkLeaves"
+        android:src="@drawable/leaves_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_calendar"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn_team"
-        android:contentDescription="@string/action_bar_btn_go_to_leaves_activity" />
+        app:layout_constraintStart_toEndOf="@+id/btn_team" />
 
     <ImageButton
         android:id="@+id/btn_calendar"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="70sp"
         android:background="@drawable/transparent_button"
+        android:contentDescription="@string/action_bar_btn_go_to_calendar"
         android:src="@drawable/calendar_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_leaves"
-        android:contentDescription="@string/action_bar_btn_go_to_calendar" />
+        app:layout_constraintStart_toEndOf="@+id/btn_leaves" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

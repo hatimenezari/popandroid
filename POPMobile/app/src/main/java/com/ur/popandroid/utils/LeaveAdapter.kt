@@ -51,8 +51,8 @@ class LeaveAdapter(val leaves: List<Leave>) : RecyclerView.Adapter<LeaveAdapter.
         holder.name.text = currentLeave.member.name
         holder.startingDate.text = "From\n${currentLeave.startingDate}"
         holder.endingDate.text = "To\n${currentLeave.endingDate}"
-        holder.duration.text = currentLeave.duration
-        holder.date.text = currentLeave.date.toString()
+        holder.duration.text = currentLeave.duration + " Days"
+        holder.date.text = currentLeave.date
         holder.reason.text = currentLeave.reason
     }
 }
