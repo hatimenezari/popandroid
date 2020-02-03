@@ -58,19 +58,21 @@ class LeavesActivity : AppCompatActivity() {
 
     fun loadLeaves(status: String){
         leavesActivityViewModel.getLeaves()?.observe(this, Observer {
-            val leaves: MutableList<Leave> = ArrayList()
+            /*val leaves: MutableList<Leave> = ArrayList()
             if(it != null)
                 leaves.addAll(it.stream().filter(
                     { l -> (!status.equals("Pending")) || l.status.equals("Pending")}
-                ).collect(Collectors.toList()))
+                ).collect(Collectors.toList()))*/
             if(status.equals("Pending")){
-                leaveAdapter = LeaveAdapter(leaves)
+                leaveAdapter = LeaveAdapter(leavesActivityViewModel.getLeaves())
                 rclvLeave.adapter = leaveAdapter
             }
             else{
-                leaveHistoryAdapter = LeaveHistoryAdapter(leaves)
+                leaveHistoryAdapter = LeaveHistoryAdapter(it)
                 rclvLeave.adapter = leaveHistoryAdapter
             }
         })
     }
+
+
 }
