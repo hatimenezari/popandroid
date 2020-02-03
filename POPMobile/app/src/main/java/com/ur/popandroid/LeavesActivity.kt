@@ -32,7 +32,6 @@ class LeavesActivity : AppCompatActivity() {
         leavesActivityViewModel = ViewModelProviders.of(this).get(LeavesActivityViewModel::class.java)
         loadLeaves( "Pending")
 
-
         leaveLayoutManager = LinearLayoutManager(this)
 
         rclvLeave.layoutManager = leaveLayoutManager
@@ -58,13 +57,17 @@ class LeavesActivity : AppCompatActivity() {
 
     fun loadLeaves(status: String){
         leavesActivityViewModel.getLeaves()?.observe(this, Observer {
-            /*val leaves: MutableList<Leave> = ArrayList()
+            val leaves: MutableList<Leave> = ArrayList()
             if(it != null)
-                leaves.addAll(it.stream().filter(
-                    { l -> (!status.equals("Pending")) || l.status.equals("Pending")}
-                ).collect(Collectors.toList()))*/
+                leaves.addAll(it.stream().filter { l -> (!status.equals("Pending")) || l.status.equals("Pending")}.collect(Collectors.toList()))
             if(status.equals("Pending")){
-                leaveAdapter = LeaveAdapter(leavesActivityViewModel.getLeaves())
+                leaveAdapter = LeaveAdapter(leaves) { leave ->
+                    run {
+                        leavesActivityViewModel.updateLeave(leave) {
+                            loadLeaves("Pending")
+                        }
+                    }
+                }
                 rclvLeave.adapter = leaveAdapter
             }
             else{

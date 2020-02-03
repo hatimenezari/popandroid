@@ -13,7 +13,9 @@ import com.ur.popandroid.R
 import com.ur.popandroid.entities.Leave
 import kotlinx.android.synthetic.main.card_leave.view.*
 
-class LeaveAdapter(val leaves: MutableLiveData<List<Leave>>) : RecyclerView.Adapter<LeaveAdapter.LeaveViewHolder>() {
+class LeaveAdapter(val leaves: List<Leave>, var lambda: ((Leave) -> (Unit))) : RecyclerView.Adapter<LeaveAdapter.LeaveViewHolder>() {
+
+
     inner class LeaveViewHolder(v: View) : RecyclerView.ViewHolder(v) {
         var avatar: ImageView = v.card_img_avatar
         var name : TextView = v.card_text_name
@@ -24,8 +26,18 @@ class LeaveAdapter(val leaves: MutableLiveData<List<Leave>>) : RecyclerView.Adap
         var reason: TextView = v.card_txt_reason
 
         init{
-            v.card_btn_approve.setOnClickListener { v -> decide(v,leaves.value!![adapterPosition])}
-            v.card_btn_refuse.setOnClickListener { v -> decide(v,leaves.value!![adapterPosition])}
+            v.card_btn_approve.setOnClickListener { v ->
+                run {
+                    leaves[adapterPosition].status = "Approved"
+                    lambda.invoke(leaves[adapterPosition])
+                }
+            }
+            v.card_btn_refuse.setOnClickListener { v ->
+                run {
+                    leaves[adapterPosition].status = "Denied"
+                    lambda.invoke(leaves[adapterPosition])
+                }
+            }
         }
 
     }
@@ -35,10 +47,10 @@ class LeaveAdapter(val leaves: MutableLiveData<List<Leave>>) : RecyclerView.Adap
         return LeaveViewHolder(leaveCard)
     }
 
-    override fun getItemCount() = leaves.value!!.size
+    override fun getItemCount() = leaves.size
 
     override fun onBindViewHolder(holder: LeaveViewHolder, position: Int) {
-        val currentLeave = leaves.value!![position]
+        val currentLeave = leaves[position]
 
         Glide.with(holder.avatar.context)
             .load(currentLeave.member.avatarURI)
@@ -52,12 +64,4 @@ class LeaveAdapter(val leaves: MutableLiveData<List<Leave>>) : RecyclerView.Adap
         holder.reason.text = currentLeave.reason
     }
 
-    fun decide(v: View, leave: Leave){
-        val decision: String = v.getTag().toString()
-        when(decision){
-            "approve" -> leave.status = "Approved"
-            "refuse" -> leave.status = "Denied"
-        }
-
-    }
 }
