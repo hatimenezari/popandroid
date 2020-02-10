@@ -16,21 +16,13 @@ import java.text.SimpleDateFormat
 
 class LeaveHistoryAdapter(val leaves: List<Leave>) : RecyclerView.Adapter<LeaveHistoryAdapter.LeaveHistoryViewHolder>() {
     inner class LeaveHistoryViewHolder(v: View) : RecyclerView.ViewHolder(v) {
-        var avatar: ImageView
-        var name : TextView
-        var duration : TextView
-        var startingDate: TextView
-        var time: TextView
-        var status: TextView
+        var avatar: ImageView = v.card_history_leave_img_avatar
+        var name : TextView = v.card_history_leave_text_name
+        var duration : TextView = v.card_history_leave_txt_duration
+        var startingDate: TextView = v.card_history_leave_txt_starting_date
+        var time: TextView = v.card_history_leave_txt_time
+        var status: TextView = v.card_history_leave_txt_status
 
-        init {
-            avatar = v.card_history_leave_img_avatar
-            name= v.card_history_leave_text_name
-            duration= v.card_history_leave_txt_duration
-            startingDate= v.card_history_leave_txt_starting_date
-            time= v.card_history_leave_txt_time
-            status = v.card_history_leave_txt_status
-        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LeaveHistoryViewHolder {

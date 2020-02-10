@@ -7,7 +7,7 @@ data class Leave(
     val startingDate: String,
     val endingDate: String,
     val duration: String,
-    val status: String,
+    var status: String,
     val reason:String,
     val member: Member
 )

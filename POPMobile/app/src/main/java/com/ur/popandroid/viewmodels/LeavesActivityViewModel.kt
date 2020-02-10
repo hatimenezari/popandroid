@@ -9,15 +9,23 @@ import com.ur.popandroid.entities.Leave
 
 class LeavesActivityViewModel : ViewModel() {
 
-    private var mutableLiveData: MutableLiveData<List<Leave>>? = null
-    private var leaveRepository: LeaveRepository = LeaveRepository
 
-    init {
-        if (mutableLiveData == null)
-            mutableLiveData = leaveRepository.getLeaves()
-    }
+    private var leaveRepository: LeaveRepository = LeaveRepository
+    private var mutableLiveData: MutableLiveData<List<Leave>>? = leaveRepository.getLeaves()
+
 
     fun getLeaves(): LiveData<List<Leave>>? {
         return mutableLiveData
+    }
+
+    fun updateLeave(leave:Leave, lambda: () -> Unit){
+        leaveRepository.updateLeave(leave) {
+            reload()
+            lambda.invoke()
+        }
+    }
+
+    fun reload(){
+        mutableLiveData = leaveRepository.getLeaves()
     }
 }

@@ -5,6 +5,7 @@ import com.ur.popandroid.entities.Leave
 import com.ur.popandroid.services.LeaveService
 import com.ur.popandroid.services.RetrofitService
 import com.ur.popandroid.utils.GenericResponseList
+import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -29,4 +30,16 @@ object LeaveRepository {
         return leaves
     }
 
+    fun updateLeave(leave: Leave, lambda : () -> Unit){
+        leaveService.updateLeave(leave.id, leave).enqueue(object : Callback<ResponseBody>{
+            override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
+                //TODO failure case
+            }
+
+            override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
+                lambda.invoke()
+            }
+
+        })
+    }
 }

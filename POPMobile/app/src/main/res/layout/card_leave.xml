@@ -107,7 +107,7 @@
         app:layout_constraintTop_toBottomOf="@+id/card_txt_starting_date" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/card_btn_refuse"
         android:layout_width="0sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -115,28 +115,30 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/rounded_button_dark"
+        android:tag="refuse"
         android:text="@string/card_leave_btn_refuse"
+        android:textAllCaps="false"
         android:textColor="@color/textColorSecondary"
         android:textSize="18sp"
-        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/card_btn_approve"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card_txt_reason" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/card_btn_approve"
         android:layout_width="0sp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:background="@drawable/rounded_button_light"
+        android:tag="approve"
         android:text="@string/card_leave_btn_approve"
+        android:textAllCaps="false"
         android:textColor="@color/textColorPrimary"
         android:textSize="18sp"
-        android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="@+id/button2" />
+        app:layout_constraintStart_toEndOf="@+id/card_btn_refuse"
+        app:layout_constraintTop_toTopOf="@+id/card_btn_refuse" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
