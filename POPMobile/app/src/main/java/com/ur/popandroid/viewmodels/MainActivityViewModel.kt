@@ -19,6 +19,7 @@ class MainActivityViewModel : ViewModel() {
             mutableLiveData = memberRepository.getMembers()
     }
 
+    //observable of members
     fun getMembers(): LiveData<List<Member>>? {
         return mutableLiveData
     }

@@ -1,5 +1,6 @@
 package com.ur.popandroid.Repositories
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.ur.popandroid.entities.Leave
 import com.ur.popandroid.services.LeaveService
@@ -41,5 +42,23 @@ object LeaveRepository {
             }
 
         })
+    }
+
+    fun getMemberLeaves(memberid: Int): MutableLiveData<List<Leave>> {
+        val leaves: MutableLiveData<List<Leave>> = MutableLiveData()
+        leaveService.getMemberLeaves(memberid).enqueue(object :
+            Callback<GenericResponseList<Leave>> {
+            override fun onFailure(call: Call<GenericResponseList<Leave>>, t: Throwable) {
+                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            }
+
+            override fun onResponse(
+                call: Call<GenericResponseList<Leave>>,
+                response: Response<GenericResponseList<Leave>>
+            ) {
+                leaves.value = response.body()?.content
+            }
+        })
+        return leaves
     }
 }

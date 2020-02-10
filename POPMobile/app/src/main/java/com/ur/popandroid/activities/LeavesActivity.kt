@@ -1,4 +1,4 @@
-package com.ur.popandroid
+package com.ur.popandroid.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +8,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.ur.popandroid.R
 import com.ur.popandroid.entities.Leave
 import com.ur.popandroid.utils.LeaveAdapter
 import com.ur.popandroid.utils.LeaveHistoryAdapter

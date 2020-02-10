@@ -14,4 +14,6 @@
     <color name="deniedText">#E23943</color>
     <color name="deniedBackground">#49253D</color>
 
+    <color name="calendarBackground">#ffffff</color>
+
 </resources>

@@ -13,7 +13,7 @@ class LeavesActivityViewModel : ViewModel() {
     private var leaveRepository: LeaveRepository = LeaveRepository
     private var mutableLiveData: MutableLiveData<List<Leave>>? = leaveRepository.getLeaves()
 
-
+    //observable of leaves
     fun getLeaves(): LiveData<List<Leave>>? {
         return mutableLiveData
     }

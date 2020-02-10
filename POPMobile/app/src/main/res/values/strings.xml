@@ -19,4 +19,8 @@
     <string name="leave_btn_upcoming">upcoming</string>
     <string name="leave_btn_all">All</string>
     <string name="leave_txt_title">Leaves</string>
+    <string name="slider_txt_work_days">Work Days</string>
+    <string name="slider_txt_sick_days">Sick Days</string>
+    <string name="slider_txt_leave_days">Leave Days</string>
+    <string name="slider_txt_national_day">National Day</string>
 </resources>

@@ -9,5 +9,6 @@ data class Leave(
     val duration: String,
     var status: String,
     val reason:String,
+    val type: String,
     val member: Member
 )
