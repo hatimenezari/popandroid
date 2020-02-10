@@ -11,8 +11,9 @@ public class LeaveBean {
     private String status;
     private String reason;
     private MemberBean Member;
+    private String type;
 
-    public LeaveBean(int id, LocalDate date, LocalDate startingDate, LocalDate endingDate, int duration, String status, String reason, MemberBean member) {
+    public LeaveBean(int id, LocalDate date, LocalDate startingDate, LocalDate endingDate, int duration, String status, String reason, MemberBean member, String type) {
         this.id = id;
         this.date = date;
         this.startingDate = startingDate;
@@ -21,6 +22,7 @@ public class LeaveBean {
         this.status = status;
         this.reason = reason;
         Member = member;
+        this.type = type;
     }
 
     public int getId() {
@@ -85,5 +87,13 @@ public class LeaveBean {
 
     public void setDuration(int duration) {
         this.duration = duration;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

@@ -17,5 +17,9 @@ interface LeaveService {
 
     @PUT("leaves/{id}")
     fun updateLeave(@Path("id") id: Int, @Body leave: Leave) : Call<ResponseBody>
+
+
+    @GET("members/{id}/leaves")
+    fun getMemberLeaves(@Path("id") id: Int): Call<GenericResponseList<Leave>>
 }
 

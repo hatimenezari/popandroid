@@ -10,7 +10,7 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CircleCrop
-import com.ur.popandroid.MemberInformationActivity
+import com.ur.popandroid.activities.MemberInformationActivity
 import com.ur.popandroid.R
 import com.ur.popandroid.entities.Member
 import com.ur.popandroid.utils.Constants.Companion.MEMBER
@@ -18,7 +18,6 @@ import com.ur.popandroid.utils.Constants.Companion.availableEmoji
 import com.ur.popandroid.utils.Constants.Companion.awayEmoji
 import com.ur.popandroid.utils.Constants.Companion.sickEmoji
 import com.ur.popandroid.utils.Constants.Companion.vacationEmoji
-import kotlinx.android.synthetic.main.card_leave.view.*
 import kotlinx.android.synthetic.main.card_member.view.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -52,10 +51,7 @@ class TeamAdapter(val members: List<Member>) : RecyclerView.Adapter<TeamAdapter.
             .transform(CircleCrop())
             .into(holder.memberPicture)
         holder.name.text = currentMember.name
-        val date = Date()
-        val df = SimpleDateFormat("HH:mm:ss")
-        df.timeZone = TimeZone.getTimeZone(currentMember.timeZone)
-        holder.time.text =  df.format(date)
+        holder.time.text =  currentMember.timeZone
         holder.state.text = getState(currentMember.availability)
     }
 
