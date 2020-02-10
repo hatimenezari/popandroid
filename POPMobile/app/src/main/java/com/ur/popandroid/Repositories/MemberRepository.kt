@@ -9,7 +9,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MemberRepository private constructor() {
+object MemberRepository {
     private val memberService: MemberService = RetrofitService.createService(MemberService::class.java)
 
     fun getMembers(): MutableLiveData<List<Member>>? {
@@ -26,18 +26,6 @@ class MemberRepository private constructor() {
             }
         })
         return members
-    }
-
-
-    companion object {
-        private var memberRepository: MemberRepository? = null
-        val instance: MemberRepository
-            get() {
-                if (memberRepository == null) {
-                    memberRepository = MemberRepository()
-                }
-                return memberRepository as (MemberRepository)
-            }
     }
 
 }

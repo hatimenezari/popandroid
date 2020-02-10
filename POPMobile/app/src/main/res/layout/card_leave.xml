@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/rounded_corners_dark">
+
+
+    <ImageView
+        android:id="@+id/card_img_avatar"
+        android:layout_width="116dp"
+        android:layout_height="117dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/oval1" />
+
+    <TextView
+        android:id="@+id/card_txt_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/pendingBackground"
+        android:paddingHorizontal="10sp"
+        android:paddingVertical="4sp"
+        android:text="@string/card_leave_txt_pending"
+        android:textColor="@color/pendingText"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/card_text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Soukaina chbih"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_txt_status" />
+
+    <TextView
+        android:id="@+id/card_text_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Feb. 6, 2019"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_text_name" />
+
+    <TextView
+        android:id="@+id/card_txt_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="6 Days"
+        android:textColor="@color/colorPrimaryLight"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_img_avatar" />
+
+    <TextView
+        android:id="@+id/card_txt_starting_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="From\nFeb. 22, 2019"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_txt_duration" />
+
+    <TextView
+        android:id="@+id/card_txt_ending_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="To\nFeb. 28, 2019"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/card_txt_starting_date"
+        app:layout_constraintTop_toTopOf="@+id/card_txt_starting_date" />
+
+    <TextView
+        android:id="@+id/card_txt_reason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="I had some headache"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_txt_starting_date" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_button_dark"
+        android:text="@string/card_leave_btn_refuse"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_txt_reason" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_button_light"
+        android:text="@string/card_leave_btn_approve"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="@+id/button2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
