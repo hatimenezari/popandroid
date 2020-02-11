@@ -23,4 +23,7 @@
     <string name="slider_txt_sick_days">Sick Days</string>
     <string name="slider_txt_leave_days">Leave Days</string>
     <string name="slider_txt_national_day">National Day</string>
+    <string name="welcome_to">WELCOME TO</string>
+    <string name="login_edtxt_email">Email</string>
+    <string name="login_btn_send_a_magic_link">Send a magic link</string>
 </resources>

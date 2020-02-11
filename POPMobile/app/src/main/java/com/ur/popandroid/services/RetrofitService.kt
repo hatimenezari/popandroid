@@ -10,7 +10,7 @@ class  RetrofitService{
         private var retrofit = Retrofit
             .Builder()
             .client(OkHttpClient.Builder().build())
-            .baseUrl("https://db17a6ef.ngrok.io/")
+            .baseUrl("https://20ba0ab6.ngrok.io/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "812338516019",
+    "firebase_url": "https://popandroid-ec528.firebaseio.com",
+    "project_id": "popandroid-ec528",
+    "storage_bucket": "popandroid-ec528.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812338516019:android:b38e621d3b90c8dd8c5346",
+        "android_client_info": {
+          "package_name": "com.ur.popandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "812338516019-hmuulgc3sqsqa4isv04n223srtkse317.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBr51YzP5wqLpX7LMKumylFeWeDBlkJy7g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "812338516019-hmuulgc3sqsqa4isv04n223srtkse317.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
