@@ -31,7 +31,7 @@ class AuthenticationActivity : AppCompatActivity() {
                     val emailLink = intent.data!!.toString()
                     if (auth.isSignInWithEmailLink(emailLink)) {
                         val email : String = sharedPref.getString("email", "none found")!!
-                        auth.signInWithEmailLink(sharedPref.getString("email", "none found")!!, emailLink)
+                        auth.signInWithEmailLink(email, emailLink)
                             .addOnCompleteListener { task ->
                                 if (task.isSuccessful) {
                                     Log.d("login", "Successfully signed in with email link!")
