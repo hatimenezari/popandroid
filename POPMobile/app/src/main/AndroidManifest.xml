@@ -16,14 +16,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activities.LeavesActivity"></activity>
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.AuthenticationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:host="popandroid.page.link"
+                    android:scheme="https"/>
+
             </intent-filter>
         </activity>
+        <activity android:name=".activities.LeavesActivity" />
+        <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.MemberInformationActivity" />
 
         <meta-data
