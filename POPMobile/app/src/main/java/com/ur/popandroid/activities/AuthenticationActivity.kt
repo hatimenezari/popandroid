@@ -10,6 +10,7 @@ import android.view.View
 import com.google.firebase.auth.ActionCodeSettings
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.dynamiclinks.FirebaseDynamicLinks
+import com.tapadoo.alerter.Alerter
 import com.ur.popandroid.R
 import kotlinx.android.synthetic.main.activity_authentication.*
 
@@ -66,6 +67,11 @@ class AuthenticationActivity : AppCompatActivity() {
                     val editor = sharedPref.edit()
                     editor.putString("email", authentication_activity_edtxt_email.text.toString())
                     editor.apply()
+                    Alerter.create(this@AuthenticationActivity)
+                        .setTitle("Email sent to:")
+                        .setText(authentication_activity_edtxt_email.text.toString())
+                        .setBackgroundColorRes(R.color.colorSecondaryLight)
+                        .show()
                 }
                 else{
                     Log.d("signin", task.exception?.message)

@@ -73,7 +73,7 @@ class MemberInformationActivity : AppCompatActivity() {
     }
 
     fun onBack(v: View) {
-        finish()
+        onBackPressed()
     }
 
     fun slideUp(v : View){
