@@ -8,6 +8,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.analytics.FirebaseAnalytics
 import com.ur.popandroid.R
 import com.ur.popandroid.entities.Member
 import com.ur.popandroid.utils.TeamAdapter
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var teamAdapter: RecyclerView.Adapter<TeamAdapter.TeamViewHolder>
     private lateinit var  teamLayoutManager: RecyclerView.LayoutManager
     private lateinit var mainActivityViewModel: MainActivityViewModel
+    private lateinit var firebaseAnalytics: FirebaseAnalytics
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +42,8 @@ class MainActivity : AppCompatActivity() {
 
         rclvTeam.layoutManager = teamLayoutManager
         btn_team.setColorFilter(R.color.colorPrimaryLight)
+
+        firebaseAnalytics = FirebaseAnalytics.getInstance(this)
     }
 
     fun checkLeaves(v: View){
