@@ -32,8 +32,10 @@ in progress
 
 The developement of this app was done following an MVVM architecture using the following stack:
 * [Kotlin](https://kotlinlang.org/)
-* Android architecture components: ViewModel, LiveData, SharedPreferences
+* Android architecture components: ViewModel, LiveData, SharedPreferences , recyclerview
 * [Glide](https://github.com/bumptech/glide)
 * [Retrofit](http://square.github.io/retrofit/)
 * [Gson](https://github.com/google/gson)
 * [material-calendarview](https://github.com/prolificinteractive/material-calendarview)
+* Firebase analytics, firebase passwordless authentication
+
