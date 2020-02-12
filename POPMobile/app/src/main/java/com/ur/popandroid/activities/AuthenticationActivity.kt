@@ -65,7 +65,7 @@ class AuthenticationActivity : AppCompatActivity() {
                     Log.d("signin", "Email sent")
                     val editor = sharedPref.edit()
                     editor.putString("email", authentication_activity_edtxt_email.text.toString())
-                    editor.commit()
+                    editor.apply()
                 }
                 else{
                     Log.d("signin", task.exception?.message)
