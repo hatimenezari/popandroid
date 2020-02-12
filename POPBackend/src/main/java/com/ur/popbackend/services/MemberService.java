@@ -59,7 +59,7 @@ public class MemberService {
                         12,
                         "Denied",
                         "gotta play the new cyberpunk",
-                        new MemberMapperImpl().memberToMemberBean(memberRepository.findById(3).get()),
+                        new MemberMapperImpl().memberToMemberBean(memberRepository.findById(1).get()),
                         "Vacation"
                 )
         );
@@ -71,7 +71,7 @@ public class MemberService {
                         12,
                         "Approved",
                         "gotta play the new cyberpunk",
-                        new MemberMapperImpl().memberToMemberBean(memberRepository.findById(3).get()),
+                        new MemberMapperImpl().memberToMemberBean(memberRepository.findById(1).get()),
                         "Vacation"
                 )
         );
@@ -83,7 +83,7 @@ public class MemberService {
                         2,
                         "Approved",
                         "gotta play the new cyberpunk",
-                        new MemberMapperImpl().memberToMemberBean(memberRepository.findById(3).get()),
+                        new MemberMapperImpl().memberToMemberBean(memberRepository.findById(1).get()),
                         "Vacation"
                 )
         );
@@ -95,7 +95,7 @@ public class MemberService {
                         3,
                         "Approved",
                         "the spanish inquisition",
-                        new MemberMapperImpl().memberToMemberBean(memberRepository.findById(3).get()),
+                        new MemberMapperImpl().memberToMemberBean(memberRepository.findById(1).get()),
                         "Vacation"
                 )
         );
@@ -108,7 +108,7 @@ public class MemberService {
                         6,
                         "Approved",
                         "please?",
-                        new MemberMapperImpl().memberToMemberBean(memberRepository.findById(3).get()),
+                        new MemberMapperImpl().memberToMemberBean(memberRepository.findById(1).get()),
                         "Sick"
                 )
         );

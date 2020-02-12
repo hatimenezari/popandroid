@@ -38,7 +38,7 @@ public class LeaveController {
     @PutMapping("/{id}")
     public void updateLeave(@PathVariable int id, @RequestBody LeaveBean leave){
         for(LeaveBean leaveBean: memberService.leaveBeansMock){
-            if(leaveBean.getId() == id)
+            if(leaveBean.getMember().getId() == id)
                 leaveBean.setStatus(leave.getStatus());
         }
     }
