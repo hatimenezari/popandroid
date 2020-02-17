@@ -22,6 +22,10 @@ class AuthenticationActivity : AppCompatActivity() {
         setContentView(R.layout.activity_authentication)
 
         sharedPref = this.getPreferences(Context.MODE_PRIVATE)
+        val intent = Intent(this, MainActivity::class.java)
+        val email : String = sharedPref.getString("email", "none found")!!
+        if(email != "none found")
+            startActivity(intent)
 
         FirebaseDynamicLinks.getInstance()
             .getDynamicLink(intent)
@@ -31,12 +35,10 @@ class AuthenticationActivity : AppCompatActivity() {
                     val intent = intent
                     val emailLink = intent.data!!.toString()
                     if (auth.isSignInWithEmailLink(emailLink)) {
-                        val email : String = sharedPref.getString("email", "none found")!!
                         auth.signInWithEmailLink(email, emailLink)
                             .addOnCompleteListener { task ->
                                 if (task.isSuccessful) {
                                     Log.d("login", "Successfully signed in with email link!")
-                                    val intent = Intent(this, MainActivity::class.java)
                                     startActivity(intent)
                                 } else {
                                     Log.e("login", "Error signing in with email link", task.exception)
